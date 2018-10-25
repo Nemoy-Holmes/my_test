@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Simple Pages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @simple_pages.each do |simple_page| %>
+      <tr>
+        <td><%= link_to 'Show', simple_page %></td>
+        <td><%= link_to 'Edit', edit_simple_page_path(simple_page) %></td>
+        <td><%= link_to 'Destroy', simple_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Simple Page', new_simple_page_path %>
